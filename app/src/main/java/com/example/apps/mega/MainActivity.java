@@ -1,12 +1,11 @@
 package com.example.apps.mega;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
+import com.example.apps.mega.ui.base.BaseActivity;
 import com.example.apps.mega.ui.main.MainFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
