@@ -3,7 +3,6 @@ package com.example.apps.mega.di.module;
 import com.example.apps.mega.Const;
 import com.example.apps.mega.network.WebService;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
 import javax.inject.Singleton;
 
@@ -17,16 +16,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 @Module
 public class NetworkModule {
-
-    @Singleton
-    @Provides
-    public Gson provideGson() {
-        return new GsonBuilder()
-                .setLenient()
-                .setPrettyPrinting()
-                .disableHtmlEscaping()
-                .create();
-    }
 
     @Singleton
     @Provides

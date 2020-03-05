@@ -8,16 +8,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.apps.mega.AppApplication;
 import com.example.apps.mega.AppInterface;
 import com.example.apps.mega.di.component.AppComponent;
-import com.example.apps.mega.network.WebService;
 
 import javax.inject.Inject;
 
 abstract public class BaseActivity extends AppCompatActivity implements OnFragmentInterface {
 
     @Inject
-    AppInterface appInterface;
-    @Inject
-    WebService webService;
+    public AppInterface appInterface;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -32,11 +29,12 @@ abstract public class BaseActivity extends AppCompatActivity implements OnFragme
 
     @Override
     public void postAction(Runnable action) {
-
+        appInterface.postAction(action);
     }
 
     @Override
     public void postAction(Runnable action, Long delayMillis) {
-
+        appInterface.postAction(action, delayMillis);
     }
+
 }

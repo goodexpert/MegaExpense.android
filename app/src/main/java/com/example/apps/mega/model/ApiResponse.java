@@ -2,20 +2,21 @@ package com.example.apps.mega.model;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Map;
 
 public class ApiResponse implements Serializable {
 
-    private Boolean success;
+    public Boolean success;
 
-    private ApiError error;
+    public ApiError error;
 
-    private String terms;
+    public String terms;
 
-    private String privacy;
+    public String privacy;
 
-    private Long timestamp;
+    public Long timestamp;
 
-    private String source;
+    public String source;
 
-    private List<Quote> quotes;
+    public Map<String, Double> quotes;
 }
