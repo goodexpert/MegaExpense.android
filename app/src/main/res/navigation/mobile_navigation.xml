@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.apps.mega.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_transaction"
+        android:name="com.example.apps.mega.ui.transaction.TransactionFragment"
+        android:label="@string/title_transaction"
+        tools:layout="@layout/fragment_list" />
+
+    <fragment
+        android:id="@+id/nav_edit_transaction"
+        android:name="com.example.apps.mega.ui.transaction.edit.EditTransactionFragment"
+        android:label="Edit Transaction"
+        tools:layout="@layout/fragment_edit_transaction">
+
+        <argument
+            android:name="transaction"
+            app:argType="com.example.apps.mega.entity.Transaction" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_new_transaction"
+        android:name="com.example.apps.mega.ui.transaction.edit.EditTransactionFragment"
+        android:label="New Transaction"
+        tools:layout="@layout/fragment_edit_transaction" />
+
+    <fragment
+        android:id="@+id/nav_setting"
+        android:name="com.example.apps.mega.ui.setting.SettingFragment"
+        android:label="@string/title_setting"
+        tools:layout="@layout/fragment_setting" />
+
+    <fragment
+        android:id="@+id/nav_category"
+        android:name="com.example.apps.mega.ui.setting.category.CategoryListFragment"
+        android:label="@string/title_category"
+        tools:layout="@layout/fragment_list" />
+
+    <fragment
+        android:id="@+id/nav_edit_category"
+        android:name="com.example.apps.mega.ui.setting.category.edit.EditCategoryFragment"
+        android:label="Edit Category"
+        tools:layout="@layout/fragment_edit_category">
+
+        <argument
+            android:name="category"
+            app:argType="com.example.apps.mega.entity.Category" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_new_category"
+        android:name="com.example.apps.mega.ui.setting.category.edit.EditCategoryFragment"
+        android:label="New Category"
+        tools:layout="@layout/fragment_edit_category" />
+</navigation>
